@@ -4,6 +4,7 @@
     justify-content: center;
     width: 450px;
     margin-top: 70px;
+    z-index: -1;
 }
 
 body {
@@ -21,4 +22,45 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.info {
+    margin-top: 115px;
+    width: 350px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info > p {
+    color: yellow;
+    font-size: 17px;
+}
+
+.conversation {
+    margin-top: 10px;
+    width: 350px;
+    height: 350px;
+    background-color: aqua;
+    z-index: 1;
+}
+
+.text {
+    display: block;
+}
+
+.recommendation {
+    display: none;
+}
+
+.auto-answer {
+    display: none;
+}
+
+.tune-tone {
+    display: none;
+}
+
+.final-answer {
+    display: none;
 }
