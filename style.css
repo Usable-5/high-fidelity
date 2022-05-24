@@ -34,13 +34,12 @@ body {
     margin-top: 120px;
     width: 340px;
     height: 340px;
-    /* background-color: aqua; */
     z-index: 1;
 }
 
 /* TEXT */
 .text {
-    display: block;
+    display: none;
 }
 
 .inbox {
@@ -66,7 +65,32 @@ body {
 
 /* RECOMMENDATION */
 .recommendation {
-    display: none;
+    display: block;
+}
+
+.recommendation > hr {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.recommendation-box {
+    padding: 0px 25px 0px 25px;
+}
+
+.recommendation-box > p {
+    color: white;
+}
+
+.recommendation-box > .recommendation-text {
+    color: white;
+    background-color: #414141;
+    font-size: 17px;
+    border-radius: 7px;
+    margin: 10px 2.5px 10px 2.5px;
+}
+
+.recommendation-box>.recommendation-text > p {
+    padding: 9px;
 }
 
 /* AUTO-ANSWER */
