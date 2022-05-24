@@ -15,6 +15,7 @@ body {
     align-items: center;
     font-family: 'Do Hyeon', sans-serif;
     margin-top: 100px;
+    background-color: #F5F5F7;
 }
 
 * {
@@ -24,37 +25,56 @@ body {
 }
 
 .info {
-    margin-top: 105px;
-    width: 350px;
     z-index: 2;
     display: flex;
     justify-content: space-around;
 }
 
-.info > p {
-    color: yellow;
-    font-size: 17px;
-}
-
 .conversation {
-    width: 315px;
-    height: 315px;
-    background-color: aqua;
+    margin-top: 120px;
+    width: 340px;
+    height: 340px;
+    /* background-color: aqua; */
     z-index: 1;
 }
 
+/* TEXT */
 .text {
     display: block;
 }
 
+.inbox {
+    padding: 25px 25px 0px 25px;
+    width: 250px;
+}
+
+.inbox > p {
+    color: white;
+    font-size: 14px;
+}
+
+.inbox > .inbox-text {
+    color: black;
+    background-color: white;
+    font-size: 17px;
+    border-radius: 7px;
+}
+
+.inbox > .inbox-text > p {
+    padding: 7px;
+}
+
+/* RECOMMENDATION */
 .recommendation {
     display: none;
 }
 
+/* AUTO-ANSWER */
 .auto-answer {
     display: none;
 }
 
+/* TUNE-TONE */
 .tune-tone {
     display: none;
 }
