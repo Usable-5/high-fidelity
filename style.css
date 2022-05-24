@@ -10,12 +10,11 @@
 body {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    padding: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Do Hyeon', sans-serif;
+    margin-top: 100px;
 }
 
 * {
