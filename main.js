@@ -18,14 +18,23 @@ inboxText2.addEventListener('click', function () {
     recommendationArea.style.display = "block";
 })
 
-
-let recommendationText2 = document.getElementById("recommendation-text-2");
-
-recommendationText2.addEventListener('swipe-up', function(e) {
-    console.log(e.target);
-    console.log(e.detail); // see event data below
+recommendationArea.addEventListener('click', function() {
     recommendationArea.style.display = "none";
     autoAnswerArea.style.display = "block";
-});
+})
 
+autoAnswerArea.addEventListener('click', function() {
+    autoAnswerArea.style.display = "none";
+    tuneToneArea.style.display = "block";
+    console.log(finalAnswerArea);
+})
 
+tuneToneArea.addEventListener('click', function() {
+    tuneToneArea.style.display = "none";
+    finalAnswerArea.style.display = "block";
+})
+
+finalAnswerArea.addEventListener('click', function () {
+    finalAnswerArea.style.display = "none";
+    textArea.style.display = "block";
+})
