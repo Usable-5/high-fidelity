@@ -2,7 +2,7 @@
     position: fixed;
     align-items: center;
     justify-content: center;
-    width: 450px;
+    width: 400px;
     margin-top: 70px;
     z-index: -1;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 .info {
-    margin-top: 115px;
+    margin-top: 105px;
     width: 350px;
     z-index: 2;
     display: flex;
@@ -37,9 +37,8 @@ body {
 }
 
 .conversation {
-    margin-top: 10px;
-    width: 350px;
-    height: 350px;
+    width: 315px;
+    height: 315px;
     background-color: aqua;
     z-index: 1;
 }
@@ -62,4 +61,10 @@ body {
 
 .final-answer {
     display: none;
+}
+
+@media screen and (max-width: 780px) {
+    body {
+        margin-top: 10px;
+    }
 }
