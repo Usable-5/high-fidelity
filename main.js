@@ -46,6 +46,27 @@ recommendationArea.addEventListener("touchmove", (e) => {
         recommendationArea.style.display = "none";
         textArea.style.display = "block";
     }
+    // Swipe Up
+    if (recommendationTouchEnd - recommendationTouchStart <= -150) {
+        recommendationArea.style.display = "none";
+        autoAnswerArea.style.display = "block";
+    }
+})
+
+let autoAnswerTouchStart = 0;
+let autoAnswerTouchEnd = 0;
+autoAnswerArea.addEventListener("touchstart", (e) => {
+    console.log(e);
+    autoAnswerTouchStart = e.touches[0].pageY;
+})
+
+autoAnswerArea.addEventListener("touchmove", (e) => {
+    autoAnswerTouchEnd = e.touches[0].pageY;
+    // Swipe Down
+    if (autoAnswerTouchEnd - autoAnswerTouchStart >= 150) {
+        autoAnswerArea.style.display = "none";
+        recommendationArea.style.display = "block";
+    }
 })
 
 recommendationText1.addEventListener('click', function () {
@@ -59,6 +80,8 @@ recommendationText2.addEventListener('click', function () {
     finalAnswerArea.style.display = "block";
     outboxTextP.innerText = recommendationText2P.innerText;
 })
+
+
 
 finalAnswerArea.addEventListener('click', function () {
     finalAnswerArea.style.display = "none";

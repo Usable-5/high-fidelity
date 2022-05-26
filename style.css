@@ -44,6 +44,8 @@ body {
 /* TEXT */
 .text {
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .inbox {
@@ -97,6 +99,8 @@ body {
 /* RECOMMENDATION */
 .recommendation {
     display: none;
+    width: 100%;
+    height: 100%;
 }
 
 .recommendation > hr {
@@ -127,6 +131,8 @@ body {
 /* AUTO-ANSWER */
 .auto-answer {
     display: none;
+    width: 100%;
+    height: 100%;
 }
 
 .auto-answer {
@@ -170,6 +176,8 @@ body {
 /* TUNE-TONE */
 .tune-tone {
     display: none;
+    width: 100%;
+    height: 100%;
 }
 
 .tune-tone {
