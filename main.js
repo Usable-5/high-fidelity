@@ -32,6 +32,22 @@ inboxText2.addEventListener('click', function () {
     recommendationTargetMessage.innerText = inbotText2P.innerText;
 })
 
+
+let recommendationTouchStart = 0;
+let recommendationTouchEnd = 0;
+recommendationArea.addEventListener("touchstart", (e) => {
+    recommendationTouchStart = e.touches[0].pageY;
+})
+
+recommendationArea.addEventListener("touchmove", (e) => {
+    recommendationTouchEnd = e.touches[0].pageY;
+    // Swipe Down
+    if (recommendationTouchEnd - recommendationTouchStart >= 150) {
+        recommendationArea.style.display = "none";
+        textArea.style.display = "block";
+    }
+})
+
 recommendationText1.addEventListener('click', function () {
     recommendationArea.style.display = "none";
     finalAnswerArea.style.display = "block";
