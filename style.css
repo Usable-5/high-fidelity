@@ -142,7 +142,7 @@ body {
 }
 
 .auto-answer > .auto-answer-text > p {
-    padding: 10px;
+    padding: 13px;
 }
 
 .other-options {
@@ -189,6 +189,8 @@ body {
 }
 
 .tune-tone > .back-btn {
+    margin-top: 20px;
+    margin-bottom: 25px;
     width: 70px;
     height: 70px;
     border-radius: 50px;
@@ -205,6 +207,8 @@ body {
 /* FINAL-ANSWER */
 .final-answer {
     display: none;
+    width: 100%;
+    height: 100%;
 }
 
 .outbox {
@@ -254,6 +258,26 @@ body {
     border-top: 10px solid yellow;
     clear: both;
 }
+
+.retry {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: lightgrey;
+}
+
+.retry-btn > i {
+    font-size: 50px;
+}
+
+.retry > p {
+    margin-top: 15px;
+    font-size: 17px;
+}
+
 
 @media screen and (max-width: 780px) {
     body {
