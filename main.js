@@ -20,12 +20,23 @@ let outboxTextP = document.getElementById("outbox-text-p");
 
 let retryBtn = document.getElementById("retry-btn");
 
+let userReadFirstPage = false;
+
+function blinkLastMessage() {
+    if (!userReadFirstPage) {
+        inboxText2.classList.add("blinking")
+    }
+}
+
+setTimeout(blinkLastMessage, 2000);
+
 inboxText1.addEventListener('click', function () {
     textArea.style.display = "none";
     recommendationArea.style.display = "block";
     recommendationTargetMessage.innerText = inbotText1P.innerText;
     recommendationText1P.innerText = "부르셨나요?"
     recommendationText2P.innerText = "말씀하세요"
+    userReadFirstPage = true;
 })
 
 inboxText2.addEventListener('click', function () {
@@ -34,6 +45,7 @@ inboxText2.addEventListener('click', function () {
     recommendationTargetMessage.innerText = inbotText2P.innerText;
     recommendationText1P.innerText = "오키오키~"
     recommendationText2P.innerText = "안될 것 같습니다"
+    userReadFirstPage = true;
 })
 
 let recommendationTouchStart = 0;
