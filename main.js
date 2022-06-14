@@ -43,7 +43,8 @@ inboxText2.addEventListener('click', function () {
     textArea.style.display = "none";
     recommendationArea.style.display = "block";
     recommendationTargetMessage.innerText = inbotText2P.innerText;
-    recommendationText1P.innerText = "오키오키~"
+    // recommendationText1P.innerText = "오키오키~"
+    recommendationText1P.innerText = "네 알겠습니다!"
     recommendationText2P.innerText = "안될 것 같습니다"
     userReadFirstPage = true;
 })
