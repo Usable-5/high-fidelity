@@ -145,9 +145,16 @@ body {
     font-size: 17px;
     border-radius: 7px;
     margin: 10px 7px 10px 7px;
+    display:flex;
+    flex-direction: row;
 }
 
 .auto-answer > .auto-answer-text > p {
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.auto-answer > .auto-answer-text > i {
     padding: 13px;
 }
 
