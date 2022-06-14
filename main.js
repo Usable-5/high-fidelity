@@ -10,6 +10,7 @@ let inbotText1P = document.getElementById("inbox-text-1-p");
 let inboxText2 = document.getElementById("inbox-text-2");
 let inbotText2P = document.getElementById("inbox-text-2-p");
 
+let recommendationInbox = document.getElementById("recommendation-inbox");
 let recommendationTargetMessage = document.getElementById("recommendation-target-message");
 let recommendationText1 = document.getElementById("recommendation-text-1");
 let recommendationText1P = document.getElementById("recommendation-text-1-p");
@@ -30,6 +31,57 @@ function blinkLastMessage() {
 
 setTimeout(blinkLastMessage, 2000);
 
+let stayedInRecommendationForTwoSeconds = false;
+
+function showOtherOptions() {
+    if (stayedInRecommendationForTwoSeconds) {
+        console.log("test")
+        setTimeout(margin0, 0);
+        setTimeout(margin1, 80);
+        setTimeout(margin2, 160);
+        setTimeout(margin3, 240);
+        setTimeout(margin4, 320);
+        setTimeout(margin5, 400);
+        setTimeout(margin6, 480);
+        setTimeout(margin5, 560);
+        setTimeout(margin4, 640);
+        setTimeout(margin3, 720);
+        setTimeout(margin2, 800);
+        setTimeout(margin1, 880);
+        setTimeout(margin0, 960);
+    }
+}
+
+function margin0() {
+    recommendationInbox.style.marginTop = "0px";
+}
+
+function margin1() {
+    recommendationInbox.style.marginTop = "-2px";
+}
+
+function margin2() {
+    recommendationInbox.style.marginTop = "-4px";
+}
+
+function margin3() {
+    recommendationInbox.style.marginTop = "-6px";
+}
+
+function margin4() {
+    recommendationInbox.style.marginTop = "-8px";
+}
+
+function margin5() {
+    recommendationInbox.style.marginTop = "-10px";
+}
+
+function margin6() {
+    recommendationInbox.style.marginTop = "-12px";
+}
+
+setInterval(showOtherOptions, 2000);
+
 inboxText1.addEventListener('click', function () {
     textArea.style.display = "none";
     recommendationArea.style.display = "block";
@@ -37,16 +89,21 @@ inboxText1.addEventListener('click', function () {
     recommendationText1P.innerText = "부르셨나요?"
     recommendationText2P.innerText = "말씀하세요"
     userReadFirstPage = true;
+    setTimeout(function() {
+        stayedInRecommendationForTwoSeconds = true;
+    }, 2000);
 })
 
 inboxText2.addEventListener('click', function () {
     textArea.style.display = "none";
     recommendationArea.style.display = "block";
     recommendationTargetMessage.innerText = inbotText2P.innerText;
-    // recommendationText1P.innerText = "오키오키~"
-    recommendationText1P.innerText = "네 알겠습니다!"
+    recommendationText1P.innerText = "오키오키~"
     recommendationText2P.innerText = "안될 것 같습니다"
     userReadFirstPage = true;
+    setTimeout(function () {
+        stayedInRecommendationForTwoSeconds = true;
+    }, 2000);
 })
 
 let recommendationTouchStart = 0;
@@ -61,11 +118,13 @@ recommendationArea.addEventListener("touchmove", (e) => {
     if (recommendationTouchEnd - recommendationTouchStart >= 150) {
         recommendationArea.style.display = "none";
         textArea.style.display = "block";
+        stayedInRecommendationForTwoSeconds = false;
     }
     // Swipe Up
     if (recommendationTouchEnd - recommendationTouchStart <= -150) {
         recommendationArea.style.display = "none";
         autoAnswerArea.style.display = "block";
+        stayedInRecommendationForTwoSeconds = false;
     }
 })
 
