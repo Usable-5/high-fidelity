@@ -224,4 +224,6 @@ finalAnswerArea.addEventListener('click', function () {
 retryBtn.addEventListener('click', function() {
     retry.style.display = "none";
     textArea.style.display = "block";
+    userReadFirstPage = false;
+    stayedInRecommendationForTwoSeconds = false;
 })
